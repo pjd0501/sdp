@@ -38,7 +38,7 @@ public class SDPFactory extends DefaultTask {
     @TaskAction
     def create() {
         String resFolder =  project.getProjectDir().getPath() + "/src/main/res/";
-        for(double dimen = 300; dimen <= 800 ; dimen = dimen + 30){
+        for(double dimen = 360; dimen <= 800 ; dimen = dimen + 30){
             String folder = resFolder + "values-sw" + (int)dimen + "dp";
             String fileName = folder + "/positive_sdps.xml";
             new File(folder).mkdir();
@@ -54,7 +54,7 @@ public class SDPFactory extends DefaultTask {
             printWriter.println("</resources>");
             printWriter.close();
         }
-        for(double dimen = 300; dimen <= 800; dimen = dimen + 30){
+        for(double dimen = 360; dimen <= 800; dimen = dimen + 30){
             String folder = resFolder + "values-sw" + (int)dimen + "dp";
             String fileName = folder + "/negative_sdps.xml";
             new File(folder).mkdir();
